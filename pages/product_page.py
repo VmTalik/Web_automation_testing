@@ -27,3 +27,11 @@ class ProductPage(BasePage):
         assert self.found_element(*b_value).text == self.found_element(*price).text, \
             "The price of the cart does not match the price of the product"
         print(self.found_element(*ProductPageLocators.BASKET_FULL_MESSAGE).text)
+
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(*ProductPageLocators.GOOD_ADDED_MESSAGE), \
+            "Success message is presented, but should not be"
+
+    def success_message_should_disappear(self):
+        assert self.is_disappeared(*ProductPageLocators.GOOD_ADDED_MESSAGE), \
+            "Success message is presented, but should disappear"
