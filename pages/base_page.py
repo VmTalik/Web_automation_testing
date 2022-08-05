@@ -13,7 +13,7 @@ class BasePage:
         self.url = url
         self.browser.implicitly_wait(timeout)  # неявное ожидание
 
-    def go_to_basket_page(self):
+    def go_to_basket_page(self): #переход на страницу с корзиной
         link = self.browser.find_element(*BasePageLocators.GO_TO_BASKET_BUTTON)
         link.click()
 
