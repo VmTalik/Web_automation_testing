@@ -23,3 +23,6 @@ class ProductPageLocators:
 
 class BasePageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    GO_TO_BASKET_BUTTON = (By.CSS_SELECTOR, "span.btn-group>[class = 'btn btn-default']")
+    GOODS_IN_BASKET_HEADER = (By.CSS_SELECTOR, "[class = 'col-sm-6 h3']")
+    BASKET_IS_EMPTY = (By.CSS_SELECTOR, "#content_inner>p")
