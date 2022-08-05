@@ -13,6 +13,10 @@ class BasePage:
         self.url = url
         self.browser.implicitly_wait(timeout)  # неявное ожидание
 
+    def go_to_basket_page(self):
+        link = self.browser.find_element(*BasePageLocators.GO_TO_BASKET_BUTTON)
+        link.click()
+
     def go_to_login_page(self):
         link = self.browser.find_element(*BasePageLocators.LOGIN_LINK)
         link.click()
@@ -63,3 +67,4 @@ class BasePage:
             alert.accept()
         except NoAlertPresentException:
             print("No second alert presented")
+
