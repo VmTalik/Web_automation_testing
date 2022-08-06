@@ -8,6 +8,10 @@ class MainPageLocators:
 class LoginPageLocators:
     LOGIN_FORM = (By.CSS_SELECTOR, "#login_form")
     REGISTER_FORM = (By.CSS_SELECTOR, "#register_form")
+    EMAIL_INPUT = (By.ID,"id_registration-email")
+    PASSWORD_INPUT = (By.ID,"id_registration-password1")
+    PASSWORD_AGAIN_INPUT = (By.ID,"id_registration-password2")
+    REGISTER_BUTTON = (By.CSS_SELECTOR,"div.register_form [class = 'btn btn-lg btn-primary']")
 
 
 class ProductPageLocators:
@@ -26,3 +30,4 @@ class BasePageLocators():
     GO_TO_BASKET_BUTTON = (By.CSS_SELECTOR, "span.btn-group>[class = 'btn btn-default']")
     GOODS_IN_BASKET_HEADER = (By.CSS_SELECTOR, "[class = 'col-sm-6 h3']")
     BASKET_IS_EMPTY = (By.CSS_SELECTOR, "#content_inner>p")
+    USER_ICON = (By.CSS_SELECTOR, ".icon-user")
