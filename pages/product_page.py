@@ -13,16 +13,16 @@ class ProductPage(BasePage):
 
     def good_added_to_basket(self):
         good_added_message = self.is_element_present(*ProductPageLocators.GOOD_ADDED_MESSAGE)
-        good_name = ProductPageLocators.GOOD_NAME  # название товара (кортеж значений)
-        good_name_message = ProductPageLocators.GOOD_NAME_MESSAGE  # название товара в сообщении (кортеж значений)
+        good_name = ProductPageLocators.GOOD_NAME
+        good_name_message = ProductPageLocators.GOOD_NAME_MESSAGE
         assert good_added_message, "message about good added is not presented"
         assert self.found_element(*good_name).text == self.found_element(*good_name_message).text, \
             "Product name does not match the product added "
         print(self.found_element(*ProductPageLocators.GOOD_ADDED_MESSAGE).text)
 
     def basket_value(self):
-        price = ProductPageLocators.PRICE_VALUE  # стоимость товара (кортеж значений)
-        b_value = ProductPageLocators.BASKET_VALUE_MESSAGE  # стоимость содержимого корзины (кортеж значений)
+        price = ProductPageLocators.PRICE_VALUE
+        b_value = ProductPageLocators.BASKET_VALUE_MESSAGE
         assert self.is_element_present(*b_value), "message with basket value is not presented"
         assert self.found_element(*b_value).text == self.found_element(*price).text, \
             "The price of the cart does not match the price of the product"
